@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "bun",
+      "request": "launch",
+      "name": "Debug app.js (Bun)",
+      "program": "${workspaceFolder}/app.js",
+      "cwd": "${workspaceFolder}",
+      "watchMode": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug app.js (Integrated Terminal)",
+      "runtimeExecutable": "bun",
+      "runtimeArgs": ["run", "--watch", "app.js"],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "bun",
+      "request": "attach",
+      "name": "Attach to Bun Process",
+      "url": "ws://localhost:6499/"
+    }
+  ]
+}

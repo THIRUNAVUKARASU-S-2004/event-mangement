@@ -1,15 +1,15 @@
 {
   "name": "event_management",
-  "module": "index.ts",
   "type": "module",
-  "private": true,
   "scripts": {
-    "typecheck": "bun check"
+    "dev": "bun --watch app.js",
+    "debug": "bun --inspect-wait app.js"
   },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^7"
+  "dependencies": {
+    "@neon/config": "^1.10.0",
+    "@neon/env": "^1.6.8",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.3.0",
+    "zod": "^4.6.7"
   }
 }
